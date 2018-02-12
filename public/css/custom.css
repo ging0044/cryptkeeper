@@ -1,6 +1,16 @@
-.intro {
+body {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+nav {
+    position: sticky;
+}
+main {
     padding: 10px;
     max-width: 960px;
     width: 100%;
-    margin: 100px auto 500px
+    margin: 6rem auto 0 auto;
 }
