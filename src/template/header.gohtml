@@ -1,0 +1,33 @@
+{{define "header"}}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/public/css/picnic.min.css" />
+    <link rel="stylesheet" href="/public/css/custom.css" />
+    <title>cryptkeeper</title>
+</head>
+<body>
+<nav>
+    <a href="/" class="brand"><span>cryptkeeper</span></a>
+
+    <!-- responsive-->
+    <input id="bmenub" type="checkbox" class="show">
+    <label for="bmenub" class="burger pseudo button">menu</label>
+
+    <div class="menu">
+        <a href="/dashboard" class="pure-menu-link">dashboard</a>
+        <a href="/history" class="pure-menu-link">history</a>
+        <a href="/filter" class="pure-menu-link">filter</a>
+        {{if .LoggedIn}}
+        <a href="/logout"><button>log out</button></a>
+        {{else}}
+        <a href="/login"><button>log in</button></a>
+        {{end}}
+    </div>
+</nav>
+<main class="intro">
+{{end}}
