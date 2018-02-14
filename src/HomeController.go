@@ -16,5 +16,5 @@ func init() {
 }
 
 func home(w http.ResponseWriter, req *http.Request) {
-	tpl.ExecuteTemplate(w, "home.index", nil)
+	tpl.ExecuteTemplate(w, "home.index", "This is some content")
 }

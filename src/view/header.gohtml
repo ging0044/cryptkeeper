@@ -19,12 +19,13 @@
     <label for="bmenub" class="burger pseudo button">menu</label>
 
     <div class="menu">
-        <a href="/dashboard/" class="pure-menu-link">dashboard</a>
-        <a href="/holdings/" class="pure-menu-link">holdings</a>
-        <a href="/user/settings" class="pure-menu-link">account</a>
         {{if .LoggedIn}}
+        <a href="/dashboard/">dashboard</a>
+        <a href="/holdings/">holdings</a>
+        <a href="/user/settings">account</a>
         <a href="/user/logout"><button>log out</button></a>
         {{else}}
+        <a href="/user/register">register</a>
         <a href="/user/login"><button>log in</button></a>
         {{end}}
     </div>
