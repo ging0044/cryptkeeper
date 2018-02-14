@@ -3,13 +3,11 @@ package main
 import (
 	"net/http"
 
+	"github.com/unrolled/logger"
 	"goji.io"
 	"goji.io/pat"
-	"os"
 	"log"
-	"github.com/unrolled/logger"
-
-
+	"os"
 )
 
 var port string
@@ -26,7 +24,7 @@ func main() {
 	loggerMiddleware := logger.New()
 
 	//init mux
-	mux := goji.NewMux();
+	mux := goji.NewMux()
 	mux.Use(loggerMiddleware.Handler)
 
 	mux.Handle(pat.Get("/public/*"), http.StripPrefix("/public/", http.FileServer(http.Dir("./public"))))

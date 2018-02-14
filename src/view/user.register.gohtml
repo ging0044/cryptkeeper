@@ -3,10 +3,9 @@
 
 <h1 class="full half-600 off-fourth-600">register</h1>
 
-<div class="flex four">
+<form class="flex four" action="/user/register" method="POST">
     <div class="full half-600 off-fourth-600">
-        <input type="email" name="email" class="stack" placeholder="email" />
-        <input type="email" name="emailConfirm" class="stack" placeholder="confirm email" />
+        <input type="email" name="email" placeholder="email" />
     </div>
     <div class="full half-600 off-fourth-600">
         <input type="password" name="password" class="stack" placeholder="password" />
@@ -14,9 +13,9 @@
     </div>
 
     <div class="full half-600 off-fourth-600">
-        <button type="button" id="submit">register</button>
+        <button type="submit" id="submit">register</button>
     </div>
-</div>
+</form>
 
 {{template "footer"}}
 {{end}}
